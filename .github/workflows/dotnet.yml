@@ -27,8 +27,8 @@ jobs:
       - name: Build and analyze with SonarCloud
         run: |
           dotnet sonarscanner begin \
-            /k:"<your_project_key>" \
-            /o:"<your_organization_key>" \
+            /k:"suganthi-Thangavel_TestRepo" \
+            /o:"suganthi-thangavel" \
             /d:sonar.host.url="https://sonarcloud.io" \
             /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
           
