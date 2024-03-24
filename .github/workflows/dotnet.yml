@@ -15,8 +15,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      - name: Set Java Home  # Added step to set JAVA_HOME
-        run: echo "JAVA_HOME=/path/to/java/installation/directory" >> $GITHUB_ENV
+        
+      - name: Setup Java
+        uses: actions/setup-java@v1
+        with:
+          java-version: '17'  # Adjust the version as needed
 
 
       - name: Setup .NET Core
